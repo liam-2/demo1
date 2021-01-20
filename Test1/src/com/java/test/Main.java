@@ -21,7 +21,7 @@ public class Main {
         for (Person value : person) {
             System.out.println("before sort=" + value);
         }
-        sort(person, new Comparators().getComparator());
+        sort(person,Comparators.getComparator());
 
         for (Person value : person) {
             System.out.println("after sort=" + value);
