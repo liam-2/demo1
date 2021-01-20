@@ -1,0 +1,8 @@
+diff a/Test1/src/com/java/test/HelloWorld.java b/Test1/src/com/java/test/HelloWorld.java	(rejected hunks)
+@@ -14,5 +14,6 @@
+         System.out.println("feature2");
+         System.out.println("feature3");
+         System.out.println("feature4");
++        System.out.println("feature6");
+     }
+ }
