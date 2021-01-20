@@ -20,36 +20,20 @@ public class Person {
         return firstname;
     }
 
-    public void setFirstName(String firstname) {
-        this.firstname = firstname;
-    }
-
     public String getLastName() {
         return lastname;
-    }
-
-    public void setLastName(String lastname) {
-        this.lastname = lastname;
     }
 
     public Boolean getSex() {
         return sex;
     }
 
-    public void setSex(Boolean sex) {
-        this.sex = sex;
-    }
-
     public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public String toString()
     {
-        return firstname +" "+lastname+" "+(sex.booleanValue()?"男":"女")+" "+age;
+        return firstname +" "+lastname+" "+(sex ?"男":"女")+" "+age;
     }
 }

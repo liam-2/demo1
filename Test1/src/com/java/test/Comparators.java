@@ -1,12 +1,14 @@
 package com.java.test;
 
+import java.util.Comparator;
+
 /**
  * @Author: liam
  * @Date: 2021/1/20 11:59
  */
 public class Comparators {
-    public static java.util.Comparator getComparator() {
-        return new java.util.Comparator() {
+    protected static Comparator getComparator() {
+        return new Comparator() {
 
             public int compare(Object o1, Object o2) {
                 if (o1 instanceof String) {
@@ -23,13 +25,11 @@ public class Comparators {
             }
 
             public int compare(String o1, String o2) {
-                String s1 = (String) o1;
-                String s2 = (String) o2;
-                int len1 = s1.length();
-                int len2 = s2.length();
+                int len1 = o1.length();
+                int len2 = o2.length();
                 int n = Math.min(len1, len2);
-                char v1[] = s1.toCharArray();
-                char v2[] = s2.toCharArray();
+                char[] v1 = o1.toCharArray();
+                char[] v2 = o2.toCharArray();
                 int pos = 0;
 
                 while (n-- != 0) {
@@ -44,14 +44,14 @@ public class Comparators {
             }
 
             public int compare(Integer o1, Integer o2) {
-                int val1 = o1.intValue();
-                int val2 = o2.intValue();
-                return (val1 < val2 ? -1 : (val1 == val2 ? 0 : 1));
+                int val1 = o1;
+                int val2 = o2;
+                return (Integer.compare(val1, val2));
 
             }
             public int compare(Boolean o1, Boolean o2) {
 
-                return (o1.equals(o2)? 0 : (o1.booleanValue()==true?1:-1));
+                return (o1.equals(o2)? 0 : (o1 ?1:-1));
 
             }
 
