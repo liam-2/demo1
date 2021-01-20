@@ -7,7 +7,7 @@ import java.util.Comparator;
  * @Date: 2021/1/20 11:59
  */
 public class Comparators {
-    protected static Comparator getComparator() {
+    protected  Comparator getComparator() {
         return new Comparator() {
 
             public int compare(Object o1, Object o2) {

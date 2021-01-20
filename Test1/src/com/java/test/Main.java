@@ -1,6 +1,5 @@
 package com.java.test;
 
-import static com.java.test.Comparators.getComparator;
 import static java.util.Arrays.sort;
 
 /**
@@ -22,7 +21,7 @@ public class Main {
         for (Person value : person) {
             System.out.println("before sort=" + value);
         }
-        sort(person, getComparator());
+        sort(person, new Comparators().getComparator());
 
         for (Person value : person) {
             System.out.println("after sort=" + value);
